@@ -4,6 +4,8 @@ word in the string.
 
 A word is a maximal substring consisting of non-space characters only.
 """
+
+
 class Solution(object):
     def lengthOfLastWord(self, s):
         """
