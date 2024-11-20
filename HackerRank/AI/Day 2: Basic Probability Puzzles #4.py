@@ -18,3 +18,5 @@ p = 0
 p += prob[0] * prob_c[1] * (Fraction(b[1][1]-1, sum(b[1]) - 1))  # red black black
 p += prob_c[0] * prob_c[1] * (Fraction(b[1][0], sum(b[1]) - 1))  # black black red
 p += prob_c[0] * prob[1] * (Fraction(b[1][1], sum(b[1]) - 1))  # black red black
+
+print(p)
