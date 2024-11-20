@@ -11,10 +11,12 @@ In the editor below, submit your answer as Plain Text in the form of an irreduci
 fraction A/B, where A and B are both integers.
 
 """
+from fractions import Fraction
+
 count = 0
 for one in range(4, 7):
     for two in range(4, 7):
         if (one == 4 and two > 5) or (one == 5 and two > 4) or (one == 6):
             count += 1
 
-print(f"{36 - count}/36")
+print(Fraction((36 - count), 36))
