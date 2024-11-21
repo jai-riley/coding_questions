@@ -11,9 +11,9 @@ h = [10, 25, 17, 11, 13, 17, 20, 13, 9, 15]
 X = 10
 mean_p = sum(p) / len(p)
 mean_h = sum(h) / len(h)
-numerator = sum([(p[x]-mean_p)*(h[x]-mean_h) for x in range(len(p))])
-squared_sum_p = sum([(p[x]-mean_p)**2 for x in range(len(p))])
-w1 = numerator/squared_sum_p
-w0 = mean_h - w1 * mean_p
-y = w0 + w1 * X
+covariance = sum([(p[x] - mean_p) * (h[x] - mean_h) for x in range(len(p))])
+variance = sum([(p[x] - mean_p) ** 2 for x in range(len(p))])
+slope = covariance / variance
+intercept = mean_h - slope * mean_p
+y = intercept + slope * X
 print(y)
